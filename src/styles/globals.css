@@ -1,0 +1,130 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .pause {
+    animation-play-state: paused;
+  }
+}
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+h2 {
+  display: block;
+  font-size: 1.5em;
+  margin-top: 0.83em;
+  margin-bottom: 0.83em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+}
+/* Icon auto slider */
+.slide-wrapper:hover .slide {
+  animation-play-state: paused;
+}
+.slide-wrapper::before,
+.slide-wrapper::after {
+  position: absolute;
+  top: 0;
+  width: 50px;
+  height: 100%;
+  content: "";
+  z-index: 2;
+}
+@media (min-width: 768px) {
+  .slide-wrapper::before,
+  .slide-wrapper::after {
+    width: 100px;
+  }
+}
+/* Fade effect */
+.slide-wrapper::before {
+  left: 0;
+  background: linear-gradient(to left, rgba(0, 0, 0, 0), black);
+}
+.slide-wrapper::after {
+  right: 0;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0), black);
+}
+/* timeline */
+.timeline ul li {
+  background-color: #1e1f22;
+}
+
+@media only screen and (min-width: 768px) {
+  /* vertical line */
+  .timeline:before {
+    content: "";
+    position: absolute;
+    top: -9px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 100%;
+    background-color: gray;
+  }
+
+  /* the dot */
+  .timeline ul li::before {
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: gray;
+    top: 0px;
+  }
+  .timeline ul li:nth-child(odd)::before {
+    transform: translate(50%, -50%);
+    right: -30px;
+  }
+  .timeline ul li:nth-child(even)::before {
+    transform: translate(-50%, -50%);
+    left: -30px;
+  }
+  /* move left and right */
+  .timeline ul li:nth-child(odd) .date {
+    right: 0;
+  }
+  .timeline ul li:nth-child(even) .date {
+    left: 0;
+  }
+  .timeline ul li:nth-child(odd) h1,
+  .timeline ul li:nth-child(odd) p {
+    text-align: right;
+  }
+  .timeline ul li:hover::before {
+    background-color: aqua;
+  }
+}
+
+#scroll::-webkit-scrollbar {
+  display: none;
+}
+
+html::-webkit-scrollbar {
+  display: none;
+}

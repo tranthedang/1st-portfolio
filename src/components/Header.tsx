@@ -9,7 +9,7 @@ import { RxCross2 } from "react-icons/rx";
 import { motion } from "framer-motion";
 const Header = () => {
   const [isNavBarShowing, setIsNavBarShowing] = useState<boolean>(false);
-  const [isMobile, setIsMobile] = useState<boolean>(window.innerWidth <= 768);
+  const [isMobile, setIsMobile] = useState<boolean>(false);
   const toggleNavbar = () => {
     setIsNavBarShowing(!isNavBarShowing);
   };
@@ -19,7 +19,7 @@ const Header = () => {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.3,
+        duration: 0.4,
         delay: 0.2,
       },
     },
@@ -30,7 +30,7 @@ const Header = () => {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.3,
+        duration: 0.35,
         delay: 0.4,
       },
     },
@@ -59,17 +59,16 @@ const Header = () => {
   useEffect(() => {}, [isMobile]);
   useEffect(() => {}, [isNavBarShowing]);
   return (
-    <header className="w-full fixed flex items-center justify-between px-7 py-7 md:p-20 bg-transparent z-[100]">
+    <header className="w-full absolute md:fixed flex items-center justify-between px-7 py-7 md:p-16 bg-transparent z-[100]">
       {!isNavBarShowing ? (
-        <motion.div className="text-5xl text-white font-semibold z-[1000]">
-          <Link href="/">Logo</Link>
+        <motion.div className="text-3xl text-white font-semibold z-[1000]">
+          <Link href="/">Dyno</Link>
         </motion.div>
       ) : (
-        <motion.div className="text-5xl text-black md:text-white font-semibold z-[1000]">
-          <Link href="/">Logo</Link>
+        <motion.div className="text-3xl text-black md:text-white font-semibold z-[1000]">
+          <Link href="/">Dyno</Link>
         </motion.div>
       )}
-
       {!isNavBarShowing ? (
         <button className="text-slate-300 z-[999]" onClick={toggleNavbar}>
           <HiMiniBars3BottomRight size={40} />
@@ -89,23 +88,39 @@ const Header = () => {
         animate={isNavBarShowing ? { opacity: 1, scale: 1 } : { opacity: 0 }}
         transition={{ duration: 0.3, ease: "easeInOut" }}
         style={{ pointerEvents: isNavBarShowing ? "auto" : "none" }}
-        className="border rounded-sm shadow-md shadow-slate-800 text-xl md:text-base w-full h-full top-0 right-0 pt-28 px-14 md:w-auto md:h-auto md:p-[3.5em] bg-white text-black fixed md:right-[60px] md:top-[80px] z-[998]"
+        className="border rounded-sm shadow-md shadow-slate-800 text-xl md:text-base w-full
+        h-full top-0 right-0 pt-28 px-14 md:w-auto md:h-auto md:p-[3.5em] 
+      bg-white text-black fixed md:right-[50px] md:top-[60px] z-[998]"
       >
         <motion.ul
           variants={listItemVariants}
           initial={isNavBarShowing ? "hidden" : "visible"}
           animate={isNavBarShowing ? "visible" : "hidden"}
-          className="my-[1.2em] leading-[2.5] text-[1.15em]"
+          className="my-[1.2em] leading-[2.5] text-[1.1em]"
         >
-          <li className="mb-6 md:my-2">
-            <a href="/work">My Self</a>
-          </li>
-          <li className="mb-6 md:my-2">
+          <motion.li
+            whileHover={{ y: -3 }}
+            whileTap={{ scale: 0.9 }}
+            className="mb-6 md:my-2"
+          >
+            <a href="/work" className="transition duration-500 hover:">
+              My Self
+            </a>
+          </motion.li>
+          <motion.li
+            whileHover={{ y: -3 }}
+            whileTap={{ scale: 0.9 }}
+            className="mb-6 md:my-2"
+          >
             <a href="/work">My Works</a>
-          </li>
-          <li className="mb-6 md:my-2">
+          </motion.li>
+          <motion.li
+            whileHover={{ y: -3 }}
+            whileTap={{ scale: 0.9 }}
+            className="mb-6 md:my-2"
+          >
             <a href="/resume">My Résumé</a>
-          </li>
+          </motion.li>
         </motion.ul>
         <motion.div
           variants={listContactVariants}
@@ -115,14 +130,22 @@ const Header = () => {
         >
           <span className="text-slate-400 tracking-widest">SAY HELLO</span>
           <ul>
-            <li className="my-3 md:my-2">
+            <motion.li
+              whileHover={{ y: -3 }}
+              whileTap={{ scale: 0.9 }}
+              className="my-3 md:my-2"
+            >
               <a href="mailto:thedangqn@gmail.com">thedangqn@gmail.com</a>
-            </li>
-            <li className="my-3 md:my-2">
+            </motion.li>
+            <motion.li
+              whileHover={{ y: -3 }}
+              whileTap={{ scale: 0.9 }}
+              className="my-3 md:my-2"
+            >
               <a href="https://t.me/dynotran999" target="_blank">
                 t.me/dynotran999
               </a>
-            </li>
+            </motion.li>
           </ul>
         </motion.div>
         <motion.ul
@@ -131,21 +154,33 @@ const Header = () => {
           animate={isNavBarShowing ? "visible" : "hidden"}
           className="flex"
         >
-          <li className="mr-[2.5em]">
+          <motion.li
+            whileHover={{ y: -3 }}
+            whileTap={{ scale: 0.9 }}
+            className="mr-[2.5em]"
+          >
             <a href="https://www.facebook.com/dynotran999/" target="_blank">
               <FaFacebookSquare size={35} />
             </a>
-          </li>
-          <li className="mr-[2.5em]">
+          </motion.li>
+          <motion.li
+            whileHover={{ y: -3 }}
+            whileTap={{ scale: 0.9 }}
+            className="mr-[2.5em]"
+          >
             <a href="https://github.com/tranthedang" target="_blank">
               <FaGithubSquare size={35} />
             </a>
-          </li>
-          <li className="mr-[2.5em]">
+          </motion.li>
+          <motion.li
+            whileHover={{ y: -3 }}
+            whileTap={{ scale: 0.9 }}
+            className="mr-[2.5em]"
+          >
             <a href="https://www.linkedin.com/in/dynotran999/" target="_blank">
               <FaLinkedin size={35} />
             </a>
-          </li>
+          </motion.li>
         </motion.ul>
       </motion.nav>
     </header>
