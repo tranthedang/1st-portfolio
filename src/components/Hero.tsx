@@ -17,22 +17,26 @@ function Hero() {
         <div className="col-span-7 place-self-center text-center sm:text-left">
           <h1 className="text-white pb-10 text-4xl sm:text-5xl lg:text-6xl font-extrabold">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-400">
-              Hello, I'm <br />
-              {
-                <TypeAnimation
-                  sequence={[
-                    "Dyno",
-                    3000,
-                    "Web Developer",
-                    1000,
-                    "Software Engineer",
-                    1000,
-                  ]}
-                  wrapper="span"
-                  speed={50}
-                  repeat={Infinity}
-                />
-              }
+              Hello, I'm Dyno
+              <br />
+              <span className="text-xl">
+                I'm a{" "}
+                {
+                  <TypeAnimation
+                    sequence={[
+                      " Friend",
+                      1000,
+                      " Web Developer",
+                      1000,
+                      " Software Engineer",
+                      1000,
+                    ]}
+                    wrapper="span"
+                    speed={50}
+                    repeat={Infinity}
+                  />
+                }
+              </span>
             </span>
           </h1>
           <p className="mb-4 text-white text-base sm:text-lg lg:text-xl">
