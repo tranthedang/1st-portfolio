@@ -7,6 +7,7 @@ import { SiJavascript } from "react-icons/si";
 import { FaGitAlt } from "react-icons/fa";
 import { SiMongodb } from "react-icons/si";
 import { motion } from "framer-motion";
+import { SiFramer } from "react-icons/si";
 const logos = [
   { logo: FaCss3Alt, name: "CSS" },
   { logo: FaNodeJs, name: "NodeJS" },
@@ -16,20 +17,35 @@ const logos = [
   { logo: SiJavascript, name: "JavaScript" },
   { logo: FaGitAlt, name: "Git" },
   { logo: SiMongodb, name: "MongoDB" },
+  { logo: SiFramer, name: "Framer" },
 ];
 
 const Technologies = () => {
   return (
-    <section className="flex flex-col space-y-20 items-center py-20 mb-40 w-full">
-      <h2 className="h2">Technologies</h2>
-      <div className="slide-wrapper absolute whitespace-nowrap overflow-hidden w-[70%] mt-10">
+    <section className="flex flex-col justify-between space-y-28 items-center py-20 mb-[300px] w-full">
+      <motion.h2
+        className=" text-white mb-10 md:mb-4"
+        initial={{ opacity: 0.5, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        viewport={{ once: true }}
+      >
+        Technologies
+      </motion.h2>
+      <motion.div
+        initial={{ opacity: 0.5, y: 75 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        viewport={{ once: true }}
+        className="slide-wrapper absolute whitespace-nowrap overflow-hidden w-[70%]"
+      >
         <div className="slide animate-slide inline-block py-4 px-2">
           {logos.map((logo, index) => (
             <div className="inline-block mx-5 md:mx-10" key={index}>
               <motion.div
-                initial={{ opacity: 0 }}
+                initial={{ opacity: 1 }}
                 whileHover={{ scale: 1.2 }}
-                animate={{ opacity: 1 }}
+                viewport={{ once: true }}
                 className="text-center flex flex-col items-center gap-y-2"
               >
                 <logo.logo className="size-10 sm:size-12 md:size-16" />
@@ -41,14 +57,19 @@ const Technologies = () => {
         <div className="slide animate-slide inline-block py-4 px-2">
           {logos.map((logo, index) => (
             <div className="inline-block mx-5 md:mx-10" key={index}>
-              <div className="text-center flex flex-col items-center gap-y-2">
+              <motion.div
+                initial={{ opacity: 1 }}
+                whileHover={{ scale: 1.2 }}
+                viewport={{ once: true }}
+                className="text-center flex flex-col items-center gap-y-2"
+              >
                 <logo.logo className="size-10 sm:size-12 md:size-16" />
                 <p>{logo.name}</p>
-              </div>
+              </motion.div>
             </div>
           ))}
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };

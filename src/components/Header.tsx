@@ -61,22 +61,41 @@ const Header = () => {
   return (
     <header className="w-full absolute md:fixed flex items-center justify-between px-7 py-7 md:p-16 bg-transparent z-[100]">
       {!isNavBarShowing ? (
-        <motion.div className="text-3xl text-white font-semibold z-[1000]">
+        <motion.div
+          whileTap={{ scale: 0.5 }}
+          className="text-3xl text-white font-semibold z-[1000]"
+        >
           <Link href="/">Dyno</Link>
         </motion.div>
       ) : (
-        <motion.div className="text-3xl text-black md:text-white font-semibold z-[1000]">
+        <motion.div
+          whileTap={{ scale: 0.5 }}
+          className="text-3xl text-black md:text-white font-semibold z-[1000]"
+        >
           <Link href="/">Dyno</Link>
         </motion.div>
       )}
       {!isNavBarShowing ? (
-        <button className="text-slate-300 z-[999]" onClick={toggleNavbar}>
+        <motion.button
+          whileTap={{ scale: 0.5 }}
+          whileHover={{ rotate: 360 }}
+          transition={{ duration: 0.5 }}
+          exit={{ rotate: 360 }}
+          className="text-slate-300 z-[999]"
+          onClick={toggleNavbar}
+        >
           <HiMiniBars3BottomRight size={40} />
-        </button>
+        </motion.button>
       ) : (
-        <button className="text-slate-900 z-[999]" onClick={toggleNavbar}>
+        <motion.button
+          whileTap={{ scale: 0.5 }}
+          whileHover={{ rotate: 360 }}
+          transition={{ duration: 0.5 }}
+          className="text-slate-900 z-[999]"
+          onClick={toggleNavbar}
+        >
           <RxCross2 size={40} />
-        </button>
+        </motion.button>
       )}
 
       <motion.nav

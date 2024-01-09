@@ -25,6 +25,9 @@ const config: Config = {
       },
       animation: {
         slide: "slide 10s infinite linear"
+      },
+      transitionTimingFunction: {
+        card: "cubic-bezier(0.222, 1, 0.333, 1)"
       }
     },
   },

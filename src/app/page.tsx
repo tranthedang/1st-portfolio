@@ -8,7 +8,7 @@ import dynamic from "next/dynamic";
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col bg-black">
-      <div className="container mx-auto px-5 sm:px-10 md:px-14 lg:px-16 xl:px-20 2xl:px-24 py-4 mt-60">
+      <div className="container mx-auto px-5 sm:px-10 md:px-14 lg:px-16 xl:px-20 2xl:px-24 py-4 mt-40">
         <Hero />
         <AboutMe />
         <Technologies />
