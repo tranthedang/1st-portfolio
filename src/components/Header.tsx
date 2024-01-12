@@ -7,6 +7,7 @@ import { FaLinkedin } from "react-icons/fa6";
 import { HiMiniBars3BottomRight } from "react-icons/hi2";
 import { RxCross2 } from "react-icons/rx";
 import { motion } from "framer-motion";
+// TODO create animation for Logo and Nav
 const Header = () => {
   const [isNavBarShowing, setIsNavBarShowing] = useState<boolean>(false);
   const [isMobile, setIsMobile] = useState<boolean>(false);
@@ -58,6 +59,7 @@ const Header = () => {
   }, []);
   useEffect(() => {}, [isMobile]);
   useEffect(() => {}, [isNavBarShowing]);
+  // TODO scrollable header
   return (
     <header className="w-full absolute md:fixed flex items-center justify-between px-7 py-7 md:p-16 bg-transparent z-[100]">
       {!isNavBarShowing ? (

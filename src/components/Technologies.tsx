@@ -43,9 +43,8 @@ const Technologies = () => {
           {logos.map((logo, index) => (
             <div className="inline-block mx-5 md:mx-10" key={index}>
               <motion.div
-                initial={{ opacity: 1 }}
-                whileHover={{ scale: 1.2 }}
-                viewport={{ once: true }}
+                whileHover={{ scale: [null, 1.3, 1.2] }}
+                transition={{ duration: 0.25 }}
                 className="text-center flex flex-col items-center gap-y-2"
               >
                 <logo.logo className="size-10 sm:size-12 md:size-16" />
@@ -58,9 +57,8 @@ const Technologies = () => {
           {logos.map((logo, index) => (
             <div className="inline-block mx-5 md:mx-10" key={index}>
               <motion.div
-                initial={{ opacity: 1 }}
-                whileHover={{ scale: 1.2 }}
-                viewport={{ once: true }}
+                whileHover={{ scale: [null, 1.3, 1.2] }}
+                transition={{ duration: 0.25 }}
                 className="text-center flex flex-col items-center gap-y-2"
               >
                 <logo.logo className="size-10 sm:size-12 md:size-16" />
