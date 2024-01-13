@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@fullpage/react-fullpage": "^0.1.40",
+    "@studio-freight/lenis": "^1.0.33",
     "@vercel/speed-insights": "^1.0.2",
     "framer-motion": "^10.16.16",
     "fullpage.js": "^4.0.20",
