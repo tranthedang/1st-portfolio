@@ -4,7 +4,7 @@ import { FaLongArrowAltRight } from "react-icons/fa";
 import { motion } from "framer-motion";
 // TODO useMediaQuery to make motion diffrently in small screen
 // TODO handle on submit
-const ContactPage = () => {
+const index = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
@@ -13,7 +13,7 @@ const ContactPage = () => {
     console.log("Submitted");
   };
   return (
-    <section className="scroll-smooth my-20">
+    <section className=" my-20">
       <div className="flex text-center justify-center items-center ">
         <div className="flex flex-col w-[1000px]">
           <motion.h2
@@ -141,4 +141,4 @@ const ContactPage = () => {
   );
 };
 
-export default ContactPage;
+export default index;

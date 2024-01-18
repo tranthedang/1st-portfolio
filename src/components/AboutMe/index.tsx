@@ -1,7 +1,8 @@
+"use client";
 import Image from "next/image";
 import React from "react";
 import { motion } from "framer-motion";
-const AboutMe = () => {
+const index = () => {
   return (
     <section className="my-20">
       <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
@@ -44,4 +45,4 @@ const AboutMe = () => {
   );
 };
 
-export default AboutMe;
+export default index;

@@ -4,7 +4,7 @@ const page = () => {
   return (
     <main
       id="scroll"
-      className="scroll-smooth w-full h-[100vh] flex flex-col overflow-y-scroll
+      className="w-full h-[100vh] flex flex-col overflow-y-scroll
        snap-mandatory snap-y"
     >
       <div

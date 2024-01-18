@@ -2,7 +2,7 @@ import React from "react";
 import { FaFacebookSquare } from "react-icons/fa";
 import { FaGithubSquare } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa6";
-const Footer = () => {
+const index = () => {
   return (
     <footer className="m-10">
       <div></div>
@@ -28,4 +28,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default index;

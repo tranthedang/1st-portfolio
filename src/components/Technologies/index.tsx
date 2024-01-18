@@ -1,3 +1,4 @@
+"use client";
 import { FaCss3Alt } from "react-icons/fa";
 import { FaNodeJs } from "react-icons/fa";
 import { FaReact } from "react-icons/fa";
@@ -20,7 +21,7 @@ const logos = [
   { logo: SiFramer, name: "Framer" },
 ];
 
-const Technologies = () => {
+const index = () => {
   return (
     <section className="flex flex-col justify-between space-y-28 items-center py-20 mb-[300px] w-full">
       <motion.h2
@@ -72,4 +73,4 @@ const Technologies = () => {
   );
 };
 
-export default Technologies;
+export default index;

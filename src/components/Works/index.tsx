@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import Card from "./Cards";
 import { motion } from "framer-motion";
@@ -41,7 +42,7 @@ const cards = [
   },
 ];
 
-const Works = () => {
+const index = () => {
   return (
     <section className="my-20 w-full">
       <div className="flex flex-col justify-center items-center mt-32">
@@ -77,4 +78,4 @@ const Works = () => {
   );
 };
 
-export default Works;
+export default index;

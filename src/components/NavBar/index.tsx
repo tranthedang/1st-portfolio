@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const Navbar = () => {
+const index = () => {
   return (
     <nav>
       <div className="flex flex-wrap items-center justify-between mx-auto p-8">
@@ -13,4 +13,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default index;

@@ -3,16 +3,16 @@ import React from "react";
 import Image from "next/image";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
-function Hero() {
-  const handleOpenCV = () => {
-    window.open(
-      "https://c5qcgij075a.sg.larksuite.com/file/Dgf0bURpSoOk00xTvWAlYaxpgEe",
-      "_blank"
-    );
-  };
+function index() {
+  // const handleOpenCV = () => {
+  //   window.open(
+  //     "https://c5qcgij075a.sg.larksuite.com/file/Dgf0bURpSoOk00xTvWAlYaxpgEe",
+  //     "_blank"
+  //   );
+  // };
 
   return (
-    <section className="scroll-smooth my-20 mb-20">
+    <section id="hero" className="my-20 mb-20">
       <div className="grid grid-cols-1 lg:grid-cols-12">
         <div className="col-span-7 place-self-center text-center sm:text-left">
           <motion.h1
@@ -69,7 +69,7 @@ function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
               className="mt-3 px-1 py-1 w-full sm:w-fit rounded-full bg-gradient-to-r from-purple-400 to-blue-400"
-              onClick={handleOpenCV}
+              // onClick={handleOpenCV}
             >
               <span className="block bg-black hover:bg-slate-800 rounded-full px-5 py-2">
                 My CV
@@ -98,4 +98,4 @@ function Hero() {
   );
 }
 
-export default Hero;
+export default index;

@@ -8,7 +8,7 @@ import { HiMiniBars3BottomRight } from "react-icons/hi2";
 import { RxCross2 } from "react-icons/rx";
 import { motion } from "framer-motion";
 // TODO create animation for Logo and Nav
-const Header = () => {
+const index = () => {
   const [isNavBarShowing, setIsNavBarShowing] = useState<boolean>(false);
   const [isMobile, setIsMobile] = useState<boolean>(false);
   const toggleNavbar = () => {
@@ -208,4 +208,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default index;

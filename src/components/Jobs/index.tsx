@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { motion } from "framer-motion";
 
@@ -22,7 +23,7 @@ const datas = [
   },
 ];
 
-const Jobs = () => {
+const index = () => {
   return (
     <section className="my-20 w-full">
       <div className="flex flex-col justify-center items-center ">
@@ -82,4 +83,4 @@ const Jobs = () => {
   );
 };
 
-export default Jobs;
+export default index;
